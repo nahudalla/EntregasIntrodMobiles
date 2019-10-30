@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EntregasIntrodMobiles</string>
+    <string name="addButtonString">Add</string>
+    <string name="subtractButtonString">Subtract</string>
+    <string name="resetButtonString">Reset</string>
+    <string name="entregable_1String">Entregable 1</string>
+</resources>
