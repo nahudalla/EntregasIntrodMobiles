@@ -4,4 +4,18 @@
     <string name="subtractButtonString">Subtract</string>
     <string name="resetButtonString">Reset</string>
     <string name="entregable_1String">Entregable 1</string>
+    <string name="entregable2resultado">Resultado:</string>
+    <string name="entregable2plus">+</string>
+    <string name="entregable2multiply">*</string>
+    <string name="entregable2minus">-</string>
+    <string name="entregable2divide">/</string>
+    <string name="entregable_2String">Entregable 2</string>
+    <string name="errorText">Error</string>
+    <string name="operando_1">Operando 1</string>
+    <string name="operando_2">Operando 2</string>
+    <string name="resultado">Resultado</string>
+    <string name="suma">SUMA</string>
+    <string name="resta">RESTA</string>
+    <string name="multiplicacion">MULTIPLICACION</string>
+    <string name="division">DIVISION</string>
 </resources>

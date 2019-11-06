@@ -11,8 +11,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         entregableUnoButton.setOnClickListener {
-            val myIntent = Intent(this, Entregable1::class.java)
-            startActivity(myIntent)
+            val intent = Intent(this, Entregable1::class.java)
+            startActivity(intent)
+        }
+
+        entregableDosButton.setOnClickListener {
+            val intent = Intent(this, Entregable2EntryPoint::class.java)
+            startActivity(intent)
         }
     }
 }
