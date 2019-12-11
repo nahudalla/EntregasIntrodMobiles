@@ -18,4 +18,9 @@
     <string name="resta">RESTA</string>
     <string name="multiplicacion">MULTIPLICACION</string>
     <string name="division">DIVISION</string>
+    <string name="ms">ms</string>
+    <string name="reset">Reset</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="entregable_3String">Entregable 3</string>
 </resources>

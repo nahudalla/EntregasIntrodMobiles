@@ -19,5 +19,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Entregable2EntryPoint::class.java)
             startActivity(intent)
         }
+
+        entregableTresButton.setOnClickListener {
+            val intent = Intent(this, Entregable3::class.java)
+            startActivity(intent)
+        }
     }
 }
