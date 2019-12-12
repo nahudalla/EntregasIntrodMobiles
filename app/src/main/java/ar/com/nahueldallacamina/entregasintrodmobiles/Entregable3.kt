@@ -1,5 +1,6 @@
 package ar.com.nahueldallacamina.entregasintrodmobiles
 
+import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_entregable3.*
@@ -10,6 +11,8 @@ class Entregable3 : AppCompatActivity() {
         if (running) this.run()
         else this.stop()
     }
+    var counter : Long = 0
+    var asyncTask : IncrementCounterTask? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,9 +27,12 @@ class Entregable3 : AppCompatActivity() {
 
     private fun run () {
         entregable3StartStopButton.text = getString(R.string.stop)
+        asyncTask = IncrementCounterTask()
+        asyncTask!!.execute(counter, 1)
     }
 
     private fun stop () {
         entregable3StartStopButton.text = getString(R.string.start)
+        asyncTask?.cancel(true)
     }
 }
