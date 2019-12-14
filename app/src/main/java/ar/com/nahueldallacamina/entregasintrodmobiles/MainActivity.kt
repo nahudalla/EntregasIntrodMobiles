@@ -24,5 +24,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Entregable3::class.java)
             startActivity(intent)
         }
+
+        entregableCuatroButton.setOnClickListener {
+            val intent = Intent(this, Entregable4::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -12,15 +12,20 @@ import kotlin.properties.Delegates
 class Entregable2EntryPoint : AppCompatActivity() {
     companion object {
         const val DO_OPERATION_REQUEST = 1
+        const val RESULT_TEXT_KEY = "result"
     }
 
-    private var operationResult : Double by Delegates.observable(0.0) { _, _, newValue ->
-        entregable2Result.text = newValue.toString()
+    private var operationResult : String by Delegates.observable("") { _, _, newValue ->
+        entregable2Result.text = newValue
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_entregable2_entry_point)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Entregable 2: Operación"
+
+        operationResult = savedInstanceState?.getString(RESULT_TEXT_KEY) ?: ""
 
         entregable2ButtonPlus.setOnClickListener {
             this.goToOperandsForm(Entregable2OperandsForm.OPERATION_SUM)
@@ -39,7 +44,13 @@ class Entregable2EntryPoint : AppCompatActivity() {
         }
     }
 
-    fun goToOperandsForm (operation : String) {
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        outState.putString(RESULT_TEXT_KEY, this.operationResult)
+    }
+
+    private fun goToOperandsForm (operation : String) {
         val intent = Intent(this, Entregable2OperandsForm::class.java)
         intent.putExtra(Entregable2OperandsForm.OPERATION_KEY, operation)
         startActivityForResult(intent, DO_OPERATION_REQUEST)
@@ -50,8 +61,7 @@ class Entregable2EntryPoint : AppCompatActivity() {
             if (resultCode != Activity.RESULT_OK) {
                 entregable2Result.text = getString(R.string.errorText)
             } else {
-                operationResult =
-                    data!!.extras!![Entregable2OperandsForm.OPERATION_RESULT_KEY] as Double
+                operationResult = data!!.extras!![Entregable2OperandsForm.OPERATION_RESULT_KEY].toString()
             }
 
             return

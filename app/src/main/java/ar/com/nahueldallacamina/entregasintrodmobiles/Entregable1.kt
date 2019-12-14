@@ -16,11 +16,18 @@ class Entregable1 : AppCompatActivity() {
         setContentView(R.layout.activity_entregable1)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Entregable 1"
 
-        counterTextView.text = this.counter.toString()
+        this.counter = savedInstanceState?.getInt("counter") ?: 0
 
         buttonAdd.setOnClickListener { this.counter++ }
         buttonSubtract.setOnClickListener { this.counter-- }
         resetButton.setOnClickListener { this.counter = 0 }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        outState.putInt("counter", this.counter)
     }
 }

@@ -23,6 +23,8 @@ class Entregable2OperandsForm : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_entregable2_operands_form)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Entregable 2: Operandos"
 
         setOperationText()
         entregable2ButtonResult.setOnClickListener { returnOperationFromIntent() }

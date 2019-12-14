@@ -23,4 +23,11 @@
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="entregable_3String">Entregable 3</string>
+    <string name="ejecutar_intentservice">Ejecutar IntentService</string>
+    <string name="ejecutar_service">Ejecutar Service</string>
+    <string name="ejecutar_boundservice">Ejecutar BoundService</string>
+    <string name="entregable_4">Entregable 4</string>
+    <string name="introducci_n_a_la_programaci_n_de_dispositivos_m_viles">Introducción a la Programación de Dispositivos Móviles</string>
+    <string name="nahuel_dallacamina_ortea">Nahuel Dallacamina Ortea</string>
+    <string name="_2do_cuatrimestre_2019">2do Cuatrimestre - 2019</string>
 </resources>

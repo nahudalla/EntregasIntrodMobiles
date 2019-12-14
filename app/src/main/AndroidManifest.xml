@@ -9,9 +9,44 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Entregable3"></activity>
-        <activity android:name=".Entregable2OperandsForm" />
-        <activity android:name=".Entregable2EntryPoint" />
+        <service
+            android:name=".Entregable4BoundService"
+            android:enabled="true"
+            android:exported="false"></service>
+        <service
+            android:name=".Entregable4Service"
+            android:exported="false" />
+
+        <activity android:name=".Entregable4">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <receiver
+            android:name=".Entregable4NumberBroadcastReceiver"
+            android:enabled="false"
+            android:exported="false" />
+
+        <service
+            android:name=".Entregable4IntentService"
+            android:exported="false" />
+
+        <activity android:name=".Entregable3">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".Entregable2OperandsForm">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Entregable2EntryPoint" />
+        </activity>
+        <activity android:name=".Entregable2EntryPoint">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity android:name=".Entregable1">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
